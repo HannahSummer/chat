@@ -31,7 +31,7 @@ consign()
     .include('app/routes')
     .then('app/models')
     .then('app/controllers')
-    .then('app');
+    .into(app);
 
 // exportar o objeto app 
 module.exports = app;
