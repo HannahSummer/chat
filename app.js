@@ -1,13 +1,15 @@
 // Importar as configurações do servidor
-const { set } = require('./config/server');
 var app = require('./config/server');
+// const skt = require('socket.io');
 
 // Parametrizar a porta de escuta
 var server = app.listen(process.env.PORT || 5000, function () {
     console.log('Servidor online');
 })
 
-var io = require('socket.io').listen(server);
+// var io = new skt.server(server);
+const serveIo = require('socket.io');
+const io = new serveIo.Server(server);
 app.set('io', io);
 
 // criar a conexão do websocket
