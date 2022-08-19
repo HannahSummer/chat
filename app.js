@@ -3,7 +3,7 @@ const { set } = require('./config/server');
 var app = require('./config/server');
 
 // Parametrizar a porta de escuta
-var server = app.listen(3000, function () {
+var server = app.listen(5000, function () {
     console.log('Servidor online');
 })
 
