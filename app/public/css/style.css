@@ -1,6 +1,6 @@
 body {
     background-color: #444;
-    background: url('../images/login-bg.jpg');  
+    background: url('../images/login-bg.jpg');
 }
 
 .form-signin input[type="text"] {
@@ -36,6 +36,7 @@ body {
     height: auto;
     margin: auto;
 }
+
 .panel {
     margin-bottom: 20px;
     background-color: rgba(255, 255, 255, 0.75);
@@ -45,56 +46,58 @@ body {
     box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
 }
 
-.linha_usuario{
+.linha_usuario {
     display: block;
-    margin-top:10px;
-    padding:5px;
+    margin-top: 10px;
+    padding: 5px;
 }
 
-.linha_usuario img{
-    margin-right:5px;
-    margin-top:-7px;
+.linha_usuario img {
+    margin-right: 5px;
+    margin-top: -7px;
 }
 
 img {
     vertical-align: middle;
 }
 
-.conversa{
-	margin-top:70px;
-	margin-bottom: 70px;
+.conversa {
+    margin-top: 70px;
+    margin-bottom: 70px;
 }
 
-.participantes{
-	margin-top:70px;
-	margin-bottom: 70px;
+.participantes {
+    margin-top: 70px;
+    margin-bottom: 70px;
 }
 
-.participante{
-	display:block;
-	margin-bottom:15px;
+.participante {
+    display: block;
+    margin-bottom: 15px;
 }
 
-.participante img{
-	margin-top:-10px;
+.participante img {
+    margin-top: -10px;
 }
 
-.dialogo{
-	width:100%;
-	height:auto;
-	margin-bottom:15px;
-	padding:10px;
-	background:#D8F0FE;
+.dialogo {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #D8F0FE;
+    border-radius: 13px;
+    box-shadow: 1px 1px 8px #2d8ea5;
 }
 
-.dialogo h4{
-	font-size:15px;
-	font-weight: bold;
-	color:#8B7777;
+.dialogo h4 {
+    font-size: 15px;
+    font-weight: bold;
+    color: #8B7777;
 }
 
-.dialogo p{
-	font-size:12px;
-	padding-left:15px;
-	color:#8B7777;
+.dialogo p {
+    font-size: 12px;
+    padding-left: 15px;
+    color: #8B7777;
 }
