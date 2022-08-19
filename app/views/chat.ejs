@@ -118,7 +118,7 @@
 		// var socket = io.connect('http://localhost:5000');
 
 		document.querySelector('#mensagem').addEventListener('keypress', function (e) {
-			if (e.key === 'Enter') {
+			if (e.key === 'Enter' && $('#mensagem').val() != "" ) {
 				socket.emit('msgParaServidor',
 					{
 						apelido: $('#apelido').val(),
@@ -135,15 +135,18 @@
 
 		$('#enviar_mensagem').click(function () {
 
-			socket.emit('msgParaServidor',
-				{
-					apelido: $('#apelido').val(),
-					mensagem: $('#mensagem').val(),
-					apelido_atualizado_nos_clientes: $('#apelido_atualizado_nos_clientes').val()
-				}
-			);
-			$('#mensagem').val("");
-			$('#apelido_atualizado_nos_clientes').val(1);
+			if ($('#mensagem').val() != "") {
+
+				socket.emit('msgParaServidor',
+					{
+						apelido: $('#apelido').val(),
+						mensagem: $('#mensagem').val(),
+						apelido_atualizado_nos_clientes: $('#apelido_atualizado_nos_clientes').val()
+					}
+				);
+				$('#mensagem').val("");
+				$('#apelido_atualizado_nos_clientes').val(1);
+			}
 
 		});
 
@@ -151,8 +154,7 @@
 			var html = '';
 
 			html += '<div class="dialogo">';
-			html += '<img src="images/ico_usuario.png">';
-			html += '<h4>' + data.apelido + '</h4>';
+			html += '<h4>' + '<img src="images/ico_usuario.png">' + data.apelido + '</h4>';
 			html += '<p>' + data.mensagem + '</p>';
 			html += '</div>';
 
