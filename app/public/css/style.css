@@ -41,10 +41,10 @@ body {
     margin-bottom: 20px;
     background-color: rgba(255, 255, 255, 0.75);
     border: 1px solid transparent;
-    border-radius: 19x;
+    border-radius: 12x;
     -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
     box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-      border-radius: 19px;
+      border-radius: 12px;
 }
 
 .linha_usuario {
