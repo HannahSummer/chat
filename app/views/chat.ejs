@@ -116,8 +116,8 @@
 
 	<script>
 
-		// var socket = io.connect('https://chat-summer.herokuapp.com/');
-		var socket = io.connect('http://localhost:5555');
+		var socket = io.connect('https://chat-summer.herokuapp.com/');
+		// var socket = io.connect('http://localhost:5555');
 
 		document.querySelector('#mensagem').addEventListener('keypress', function (e) {
 			if (e.key === 'Enter' && $('#mensagem').val() != "") {
