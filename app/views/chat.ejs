@@ -153,6 +153,8 @@
 		socket.on('msgParaCliente', function (data) {
 			var html = '';
 
+			const miau = new Audio('audios/miau.mp3');
+			music.play();
 			html += '<div class="dialogo">';
 			html += '<h4>' + '<img class="img-user" src="images/ico_usuario.png">' + data.apelido + '</h4>';
 			html += '<p>' + data.mensagem + '</p>';
