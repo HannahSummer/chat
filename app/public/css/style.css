@@ -75,10 +75,15 @@ img {
 .participante {
     display: block;
     margin-bottom: 15px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 4px 7px 30px #47b8bf;
 }
 
 .participante img {
-    margin-top: -10px;
+    margin-top: -4px;
+    margin-right: -11px;
 }
 
 .dialogo {
