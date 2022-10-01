@@ -116,8 +116,8 @@
 
 	<script>
 
-		var socket = io.connect('https://chat-summer.herokuapp.com/');
-		// var socket = io.connect('http://localhost:5555');
+		// var socket = io.connect('https://chat-summer.herokuapp.com/');
+		var socket = io.connect('http://localhost:5555');
 
 		document.querySelector('#mensagem').addEventListener('keypress', function (e) {
 			if (e.key === 'Enter' && $('#mensagem').val() != "") {
@@ -153,8 +153,17 @@
 		socket.on('msgParaCliente', function (data) {
 			var html = '';
 
-			const miau = new Audio('audios/miau.mp3');
-			music.play();
+			if (data.mensagem == "gato") {
+
+				const gato = new Audio('audios/gato.mp3');
+				gato.play();
+
+			} else if(data.mensagem == "cachorro") {
+
+				const cachorro = new Audio('audios/cachorro.mp3');
+				cachorro.play();
+			}
+
 			html += '<div class="dialogo">';
 			html += '<h4>' + '<img class="img-user" src="images/ico_usuario.png">' + data.apelido + '</h4>';
 			html += '<p>' + data.mensagem + '</p>';
