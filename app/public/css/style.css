@@ -102,3 +102,11 @@ img {
     padding-left: 15px;
     color: #8B7777;
 }
+
+.hora {
+    font-size: 10px;
+    color: #8B7777;
+    float: right;
+    margin-top: -37px;
+    margin-right: 13px;
+}

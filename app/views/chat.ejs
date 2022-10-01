@@ -116,11 +116,11 @@
 
 	<script>
 
-		var socket = io.connect('https://chat-summer.herokuapp.com/');
-		// var socket = io.connect('http://localhost:5000');
+		// var socket = io.connect('https://chat-summer.herokuapp.com/');
+		var socket = io.connect('http://localhost:5555');
 
 		document.querySelector('#mensagem').addEventListener('keypress', function (e) {
-			if (e.key === 'Enter' && $('#mensagem').val() != "" ) {
+			if (e.key === 'Enter' && $('#mensagem').val() != "") {
 				socket.emit('msgParaServidor',
 					{
 						apelido: $('#apelido').val(),
@@ -156,6 +156,9 @@
 			html += '<div class="dialogo">';
 			html += '<h4>' + '<img src="images/ico_usuario.png">' + data.apelido + '</h4>';
 			html += '<p>' + data.mensagem + '</p>';
+			const d = new Date();
+			html += '<span class = "hora">' + (d.getHours() < 10 ? "0" + d.getHours() : d.getHours()) + ":" + (d.getMinutes() < 10 ? "0" + d.getMinutes() : d.getMinutes()); + '</span>';
+
 			html += '</div>';
 
 			$('#dialogos').append(html);
