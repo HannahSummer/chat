@@ -154,7 +154,7 @@
 			var html = '';
 
 			html += '<div class="dialogo">';
-			html += '<h4>' + '<img src="images/ico_usuario.png">' + data.apelido + '</h4>';
+			html += '<h4>' + '<img class="img-user" src="images/ico_usuario.png">' + data.apelido + '</h4>';
 			html += '<p>' + data.mensagem + '</p>';
 			const d = new Date();
 			html += '<span class = "hora">' + (d.getHours() < 10 ? "0" + d.getHours() : d.getHours()) + ":" + (d.getMinutes() < 10 ? "0" + d.getMinutes() : d.getMinutes()); + '</span>';

@@ -61,7 +61,10 @@ body {
 img {
     vertical-align: middle;
 }
-
+.img-user {
+    margin-right: 6px;
+    margin-bottom: 6px;
+}
 .conversa {
     margin-top: 70px;
     margin-bottom: 70px;
